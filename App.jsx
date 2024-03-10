@@ -6,22 +6,18 @@
  */
 
 import React from 'react';
-import {SafeAreaView, StyleSheet, View, Button} from 'react-native';
+import {SafeAreaView, StyleSheet, View, Button, Text} from 'react-native';
 import AppNavigator from './src/services/navigation/app-navigator';
 
-function App({navigation}) {
+function App() {
   return (
-    <SafeAreaView>
-      <AppNavigator>
-        <View>
-          <Button
-            onPress={() => navigation.navigate()}
-            title="Go to Home Page"
-            color="blue"
-          />
+    <AppNavigator>
+      <SafeAreaView>
+        <View style={styles.sectionContainer}>
+          <Text>Welcome to React Native Demo App!</Text>
         </View>
-      </AppNavigator>
-    </SafeAreaView>
+      </SafeAreaView>
+    </AppNavigator>
   );
 }
 
@@ -29,18 +25,6 @@ const styles = StyleSheet.create({
   sectionContainer: {
     marginTop: 32,
     paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
   },
 });
 
